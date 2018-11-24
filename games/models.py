@@ -34,7 +34,7 @@ class Game(models.Model):
         max_length=40,
         default='UPCOMING'
     )
-    polls = models.ManyToManyField(Poll)
+    polls = models.ManyToManyField(Poll, blank=True)
 
     def __str__(self):
         return "%s %s %s" % (
